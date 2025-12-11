@@ -1,0 +1,79 @@
+<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chipGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="glowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#8b5cf6;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background glow -->
+  <circle cx="200" cy="200" r="180" fill="url(#glowGradient)"/>
+
+  <!-- Main chip body -->
+  <rect x="100" y="100" width="200" height="200" rx="16" fill="url(#chipGradient)"/>
+
+  <!-- Inner chip detail -->
+  <rect x="130" y="130" width="140" height="140" rx="8" fill="#1e3a8a" opacity="0.5"/>
+
+  <!-- Central core -->
+  <rect x="160" y="160" width="80" height="80" rx="4" fill="#60a5fa"/>
+
+  <!-- Core pattern -->
+  <rect x="175" y="175" width="20" height="20" rx="2" fill="#1e40af"/>
+  <rect x="205" y="175" width="20" height="20" rx="2" fill="#1e40af"/>
+  <rect x="175" y="205" width="20" height="20" rx="2" fill="#1e40af"/>
+  <rect x="205" y="205" width="20" height="20" rx="2" fill="#1e40af"/>
+
+  <!-- Connection pins - Top -->
+  <rect x="125" y="70" width="8" height="30" rx="2" fill="#94a3b8"/>
+  <rect x="150" y="70" width="8" height="30" rx="2" fill="#94a3b8"/>
+  <rect x="175" y="70" width="8" height="30" rx="2" fill="#94a3b8"/>
+  <rect x="200" y="70" width="8" height="30" rx="2" fill="#94a3b8"/>
+  <rect x="225" y="70" width="8" height="30" rx="2" fill="#94a3b8"/>
+  <rect x="250" y="70" width="8" height="30" rx="2" fill="#94a3b8"/>
+  <rect x="267" y="70" width="8" height="30" rx="2" fill="#94a3b8"/>
+
+  <!-- Connection pins - Bottom -->
+  <rect x="125" y="300" width="8" height="30" rx="2" fill="#94a3b8"/>
+  <rect x="150" y="300" width="8" height="30" rx="2" fill="#94a3b8"/>
+  <rect x="175" y="300" width="8" height="30" rx="2" fill="#94a3b8"/>
+  <rect x="200" y="300" width="8" height="30" rx="2" fill="#94a3b8"/>
+  <rect x="225" y="300" width="8" height="30" rx="2" fill="#94a3b8"/>
+  <rect x="250" y="300" width="8" height="30" rx="2" fill="#94a3b8"/>
+  <rect x="267" y="300" width="8" height="30" rx="2" fill="#94a3b8"/>
+
+  <!-- Connection pins - Left -->
+  <rect x="70" y="125" width="30" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="70" y="150" width="30" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="70" y="175" width="30" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="70" y="200" width="30" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="70" y="225" width="30" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="70" y="250" width="30" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="70" y="267" width="30" height="8" rx="2" fill="#94a3b8"/>
+
+  <!-- Connection pins - Right -->
+  <rect x="300" y="125" width="30" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="300" y="150" width="30" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="300" y="175" width="30" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="300" y="200" width="30" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="300" y="225" width="30" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="300" y="250" width="30" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="300" y="267" width="30" height="8" rx="2" fill="#94a3b8"/>
+
+  <!-- Circuit traces -->
+  <path d="M 50 150 L 70 150" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+  <path d="M 50 200 L 70 200" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+  <path d="M 330 150 L 350 150" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+  <path d="M 330 200 L 350 200" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+  <path d="M 150 50 L 150 70" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+  <path d="M 225 50 L 225 70" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+  <path d="M 150 330 L 150 350" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+  <path d="M 225 330 L 225 350" stroke="#60a5fa" stroke-width="2" opacity="0.6"/>
+
+  <!-- AI text label -->
+  <text x="200" y="207" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">AI</text>
+</svg>

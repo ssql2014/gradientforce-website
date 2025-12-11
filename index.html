@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Force - NPU IP Solutions & EDA Services</title>
+    <meta name="description" content="Gradient Force provides customized NPU IP development based on Google Coral NPU and EDA tool distribution services for semiconductor industry.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --accent: #f97316;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--secondary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0e7ff 100%);
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+
+        .hero-text h1 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            margin-left: 16px;
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-visual img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 120px 0;
+            background: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--gray);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .service-card {
+            background: var(--light);
+            border-radius: 16px;
+            padding: 40px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .service-icon svg {
+            width: 32px;
+            height: 32px;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            margin-bottom: 24px;
+        }
+
+        .service-card ul {
+            list-style: none;
+        }
+
+        .service-card li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            color: var(--gray);
+        }
+
+        .service-card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* NPU Section */
+        .npu-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+        }
+
+        .npu-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .npu-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .npu-text p {
+            color: #94a3b8;
+            margin-bottom: 24px;
+            font-size: 1.125rem;
+        }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 32px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .feature-item span {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .npu-visual {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .npu-visual img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* EDA Section */
+        .eda-section {
+            padding: 120px 0;
+            background: white;
+        }
+
+        .eda-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .eda-features {
+            display: grid;
+            gap: 24px;
+        }
+
+        .eda-feature {
+            display: flex;
+            gap: 20px;
+            padding: 24px;
+            background: var(--light);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+
+        .eda-feature:hover {
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .eda-feature-icon {
+            width: 48px;
+            height: 48px;
+            min-width: 48px;
+            background: var(--gradient);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .eda-feature h4 {
+            font-size: 1.125rem;
+            margin-bottom: 8px;
+        }
+
+        .eda-feature p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 120px 0;
+            background: var(--light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .about-text p {
+            color: var(--gray);
+            margin-bottom: 16px;
+            font-size: 1.1rem;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 24px;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-item p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-top: 8px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 120px 0;
+            background: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 24px;
+        }
+
+        .contact-info p {
+            color: var(--gray);
+            margin-bottom: 32px;
+            font-size: 1.1rem;
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .contact-item-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+        }
+
+        .contact-form {
+            background: var(--light);
+            padding: 40px;
+            border-radius: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+
+        .footer-links h4 {
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content,
+            .npu-content,
+            .eda-content,
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+
+            .btn-secondary {
+                display: block;
+                margin: 16px 0 0 0;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Gradient Force</div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#npu">NPU IP</a></li>
+                <li><a href="#eda">EDA Tools</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Powering the Future of <span>AI Silicon</span></h1>
+                    <p>Customized NPU IP solutions based on Google Coral NPU and comprehensive EDA tool distribution services for next-generation semiconductor designs.</p>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <a href="#services" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="hero-visual">
+                    <img src="assets/hero-chip.svg" alt="AI Chip Illustration">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>End-to-end solutions for AI silicon development, from IP customization to design tools</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"/>
+                        </svg>
+                    </div>
+                    <h3>NPU IP Customization</h3>
+                    <p>Tailored neural processing unit IP solutions based on Google's open-source Coral NPU architecture for your specific AI workloads.</p>
+                    <ul>
+                        <li>Architecture customization for target applications</li>
+                        <li>Performance optimization for specific ML models</li>
+                        <li>Power-efficient design for edge devices</li>
+                        <li>Full integration support and verification</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <h3>EDA Tool Distribution</h3>
+                    <p>Comprehensive EDA software solutions from leading vendors to accelerate your chip design and verification workflows.</p>
+                    <ul>
+                        <li>Full-spectrum EDA tool portfolio</li>
+                        <li>Technical training and support</li>
+                        <li>Flexible licensing models</li>
+                        <li>Integration consulting services</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <h3>Design Services</h3>
+                    <p>Expert engineering services to help you bring your AI-powered semiconductor products from concept to silicon.</p>
+                    <ul>
+                        <li>RTL design and verification</li>
+                        <li>Physical design implementation</li>
+                        <li>FPGA prototyping and validation</li>
+                        <li>Silicon bring-up support</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Technical Support</h3>
+                    <p>Dedicated support team to ensure successful deployment and optimization of your AI silicon solutions.</p>
+                    <ul>
+                        <li>24/7 technical assistance</li>
+                        <li>Regular training workshops</li>
+                        <li>Documentation and resources</li>
+                        <li>Performance optimization consulting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NPU Section -->
+    <section id="npu" class="npu-section">
+        <div class="container">
+            <div class="npu-content">
+                <div class="npu-text">
+                    <h2>Google Coral NPU Based Solutions</h2>
+                    <p>Leverage Google's open-source Coral NPU architecture to build ultra-low-power AI accelerators for wearables, AR glasses, and IoT devices.</p>
+                    <p>Our expertise in Coral NPU allows us to deliver customized solutions that meet your specific performance, power, and area requirements.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <span></span>
+                            <p>RISC-V RV32IMF Architecture</p>
+                        </div>
+                        <div class="feature-item">
+                            <span></span>
+                            <p>128-bit SIMD Pipeline</p>
+                        </div>
+                        <div class="feature-item">
+                            <span></span>
+                            <p>Matrix/Vector/Scalar Units</p>
+                        </div>
+                        <div class="feature-item">
+                            <span></span>
+                            <p>Ultra-Low Power Design</p>
+                        </div>
+                        <div class="feature-item">
+                            <span></span>
+                            <p>AXI4 Bus Interface</p>
+                        </div>
+                        <div class="feature-item">
+                            <span></span>
+                            <p>Tightly-Coupled Memory</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="npu-visual">
+                    <img src="assets/npu-architecture.png" alt="Coral NPU Architecture">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDA Section -->
+    <section id="eda" class="eda-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>EDA Tools & Solutions</h2>
+                <p>Comprehensive electronic design automation tools to power your semiconductor development</p>
+            </div>
+            <div class="eda-content">
+                <div class="eda-text">
+                    <h3 style="font-size: 1.75rem; margin-bottom: 16px;">Complete EDA Ecosystem</h3>
+                    <p style="color: var(--gray); margin-bottom: 24px; font-size: 1.1rem;">As an authorized distributor, we provide access to industry-leading EDA tools with localized support, training, and competitive pricing tailored for the Asia-Pacific market.</p>
+                    <a href="#contact" class="btn btn-primary">Request Demo</a>
+                </div>
+                <div class="eda-features">
+                    <div class="eda-feature">
+                        <div class="eda-feature-icon">
+                            <svg width="24" height="24" fill="none" stroke="white" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Synthesis & Simulation</h4>
+                            <p>High-performance RTL synthesis and simulation tools for complex digital designs</p>
+                        </div>
+                    </div>
+                    <div class="eda-feature">
+                        <div class="eda-feature-icon">
+                            <svg width="24" height="24" fill="none" stroke="white" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Physical Design</h4>
+                            <p>Place and route solutions for advanced process nodes down to 5nm</p>
+                        </div>
+                    </div>
+                    <div class="eda-feature">
+                        <div class="eda-feature-icon">
+                            <svg width="24" height="24" fill="none" stroke="white" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Verification & DFT</h4>
+                            <p>Comprehensive verification suites and design-for-test solutions</p>
+                        </div>
+                    </div>
+                    <div class="eda-feature">
+                        <div class="eda-feature-icon">
+                            <svg width="24" height="24" fill="none" stroke="white" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Signoff & Analysis</h4>
+                            <p>Timing, power, and reliability signoff tools for first-pass silicon success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Gradient Force</h2>
+                    <p>Gradient Force is a semiconductor technology company headquartered in Hong Kong, specializing in AI accelerator IP and EDA solutions for the global market.</p>
+                    <p>We bridge the gap between cutting-edge AI silicon technology and industry needs, providing customized NPU IP based on Google's open-source Coral NPU and comprehensive EDA tool distribution services.</p>
+                    <p>Our team combines deep expertise in VLSI design, AI/ML algorithms, and semiconductor business development to deliver solutions that accelerate your time-to-market.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stats">
+                        <div class="stat-item">
+                            <h3>15+</h3>
+                            <p>Years Combined Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Successful Projects</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>3</h3>
+                            <p>Regional Offices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Ready to accelerate your AI silicon development? Contact us to discuss how we can help bring your vision to life.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Email</strong>
+                                <p>contact@gradientforce.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-icon">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <strong>Location</strong>
+                                <p>Hong Kong</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">Gradient Force</div>
+                    <p>Empowering the next generation of AI silicon with customized NPU IP solutions and comprehensive EDA tools.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#npu">NPU IP</a></li>
+                        <li><a href="#eda">EDA Tools</a></li>
+                        <li><a href="#services">Design Services</a></li>
+                        <li><a href="#services">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://developers.google.com/coral" target="_blank">Coral Documentation</a></li>
+                        <li><a href="https://github.com/google/coralnpu-hw" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gradient Force Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
