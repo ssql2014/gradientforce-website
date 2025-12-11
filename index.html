@@ -58,12 +58,12 @@
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            height: 32px;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
         }
 
         .nav-links {
@@ -507,7 +507,9 @@
         }
 
         .footer-brand .logo {
+            display: block;
             margin-bottom: 16px;
+            height: 28px;
         }
 
         .footer-brand p {
@@ -597,7 +599,7 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-content">
-            <div class="logo">Gradient Force</div>
+            <a href="#" class="logo"><img src="assets/logo-final.svg" alt="Gradient Force"></a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#npu">NPU IP</a></li>
@@ -893,7 +895,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="logo">Gradient Force</div>
+                    <a href="#" class="logo"><img src="assets/logo-final.svg" alt="Gradient Force" style="filter: brightness(0) invert(1);"></a>
                     <p>Empowering the next generation of AI silicon with customized NPU IP solutions and comprehensive EDA tools.</p>
                 </div>
                 <div class="footer-links">

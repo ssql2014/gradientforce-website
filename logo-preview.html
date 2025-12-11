@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Force - Logo Final</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #f1f5f9;
+            padding: 40px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #1e293b;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            max-width: 550px;
+            margin: 0 auto;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .card.highlight {
+            border: 3px solid #2563eb;
+        }
+        .card h3 {
+            text-align: center;
+            margin-bottom: 24px;
+            color: #475569;
+            font-size: 14px;
+        }
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-width: 100%;
+            height: 60px;
+        }
+        .dark-bg {
+            background: #0f172a;
+            border-radius: 12px;
+            padding: 30px;
+        }
+        .description {
+            text-align: center;
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .tag {
+            background: #2563eb;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            margin-left: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gradient Force - 最终方案</h1>
+    <div class="grid">
+        <div class="card highlight">
+            <h3>最优方案 <span class="tag">FINAL</span></h3>
+            <div class="logo-container">
+                <img src="assets/logo-final.svg" alt="Logo Final">
+            </div>
+            <p class="description">
+                透明度渐变线（淡→浓）+ 圆点收尾<br>
+                体现：梯度积累 → 力量汇聚
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>深色背景效果</h3>
+            <div class="logo-container dark-bg">
+                <img src="assets/logo-final.svg" alt="Logo Final Dark" style="filter: brightness(0) invert(1);">
+            </div>
+            <p class="description">深色背景适配</p>
+        </div>
+
+        <div class="card">
+            <h3>小尺寸预览</h3>
+            <div class="logo-container">
+                <img src="assets/logo-final.svg" alt="Logo Final Small" style="height: 30px;">
+            </div>
+            <p class="description">小尺寸仍清晰可辨</p>
+        </div>
+    </div>
+</body>
+</html>

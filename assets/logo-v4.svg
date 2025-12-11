@@ -1,0 +1,37 @@
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gf1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af"/>
+      <stop offset="50%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="gf2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 抽象的梯度曲面 - 3D等高线效果 -->
+  <ellipse cx="100" cy="160" rx="70" ry="20" stroke="url(#gf1)" stroke-width="2.5" fill="none" opacity="0.3"/>
+  <ellipse cx="100" cy="140" rx="60" ry="18" stroke="url(#gf1)" stroke-width="2.5" fill="none" opacity="0.5"/>
+  <ellipse cx="100" cy="120" rx="50" ry="15" stroke="url(#gf1)" stroke-width="2.5" fill="none" opacity="0.7"/>
+  <ellipse cx="100" cy="100" rx="40" ry="12" stroke="url(#gf1)" stroke-width="3" fill="none" opacity="0.85"/>
+  <ellipse cx="100" cy="82" rx="28" ry="9" stroke="url(#gf1)" stroke-width="3" fill="none"/>
+
+  <!-- 中心点 - 最优解/收敛点 -->
+  <circle cx="100" cy="70" r="8" fill="url(#gf1)"/>
+
+  <!-- 梯度下降路径 - 力的方向 -->
+  <path d="M 145 155
+           Q 140 140, 130 125
+           Q 120 110, 115 95
+           Q 110 80, 100 70"
+        stroke="url(#gf1)" stroke-width="4" stroke-linecap="round" fill="none"
+        stroke-dasharray="0" opacity="0.9"/>
+
+  <!-- 箭头 -->
+  <circle cx="145" cy="155" r="5" fill="url(#gf1)" opacity="0.5"/>
+  <circle cx="130" cy="125" r="4" fill="url(#gf1)" opacity="0.7"/>
+  <circle cx="115" cy="95" r="3" fill="url(#gf1)" opacity="0.85"/>
+
+</svg>
