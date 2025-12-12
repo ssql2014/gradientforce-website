@@ -42,26 +42,30 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: transparent;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
             z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .nav-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 16px 24px;
+            padding: 12px 24px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .logo {
-            height: 100px;
+            height: 60px;
+            flex-shrink: 0;
         }
 
         .logo img {
             height: 100%;
             width: auto;
+            filter: brightness(0) invert(1);
         }
 
         .nav-links {
