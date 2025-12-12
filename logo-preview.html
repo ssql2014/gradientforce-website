@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gradient Force - Logo Final</title>
+    <title>Gradient Force - Logo Preview</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -20,7 +20,7 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 24px;
-            max-width: 550px;
+            max-width: 600px;
             margin: 0 auto;
         }
         .card {
@@ -28,9 +28,6 @@
             border-radius: 16px;
             padding: 40px;
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-        .card.highlight {
-            border: 3px solid #2563eb;
         }
         .card h3 {
             text-align: center;
@@ -46,7 +43,7 @@
         }
         .logo-container img {
             max-width: 100%;
-            height: 60px;
+            height: 55px;
         }
         .dark-bg {
             background: #0f172a;
@@ -59,44 +56,41 @@
             font-size: 13px;
             line-height: 1.6;
         }
-        .tag {
-            background: #2563eb;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 11px;
-            margin-left: 6px;
-        }
     </style>
 </head>
 <body>
-    <h1>Gradient Force - 最终方案</h1>
+    <h1>Logo 字体与颜色优化</h1>
     <div class="grid">
-        <div class="card highlight">
-            <h3>最优方案 <span class="tag">FINAL</span></h3>
+        <div class="card">
+            <h3>当前版本</h3>
             <div class="logo-container">
-                <img src="assets/logo-final.svg" alt="Logo Final">
+                <img src="assets/logo-final.svg" alt="Current Logo">
             </div>
-            <p class="description">
-                透明度渐变线（淡→浓）+ 圆点收尾<br>
-                体现：梯度积累 → 力量汇聚
-            </p>
+            <p class="description">Arial 粗体，灰蓝色</p>
         </div>
 
         <div class="card">
-            <h3>深色背景效果</h3>
+            <h3>V5 - 深藏蓝</h3>
+            <div class="logo-container">
+                <img src="assets/logo-final-v5.svg" alt="Logo V5">
+            </div>
+            <p class="description">深藏蓝 #0c1a3d，更沉稳专业<br>蓝青渐变曲线</p>
+        </div>
+
+        <div class="card" style="border: 3px solid #2563eb;">
+            <h3>V6 - 推荐</h3>
+            <div class="logo-container">
+                <img src="assets/logo-final-v6.svg" alt="Logo V6">
+            </div>
+            <p class="description">近黑色 #111827，最有力量感<br>蓝青渐变更鲜明，曲线更粗</p>
+        </div>
+
+        <div class="card">
+            <h3>V6 深色背景</h3>
             <div class="logo-container dark-bg">
-                <img src="assets/logo-final.svg" alt="Logo Final Dark" style="filter: brightness(0) invert(1);">
+                <img src="assets/logo-final-v6.svg" alt="Logo V6 Dark" style="filter: brightness(0) invert(1);">
             </div>
-            <p class="description">深色背景适配</p>
-        </div>
-
-        <div class="card">
-            <h3>小尺寸预览</h3>
-            <div class="logo-container">
-                <img src="assets/logo-final.svg" alt="Logo Final Small" style="height: 30px;">
-            </div>
-            <p class="description">小尺寸仍清晰可辨</p>
+            <p class="description">深色背景效果</p>
         </div>
     </div>
 </body>

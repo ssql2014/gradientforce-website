@@ -1,17 +1,16 @@
 <svg viewBox="0 0 400 80" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="lg2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#1e40af"/>
-      <stop offset="40%" style="stop-color:#2563eb"/>
+    <linearGradient id="lineGrad6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
       <stop offset="100%" style="stop-color:#06b6d4"/>
     </linearGradient>
   </defs>
 
-  <!-- 文字 -->
-  <text x="10" y="50" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#1e293b">
+  <!-- 统一粗体，纯黑更有力 -->
+  <text x="10" y="48" font-family="'Helvetica Neue', Arial, sans-serif" font-size="40" font-weight="700" fill="#111827" letter-spacing="-0.5">
     Gradient Force
   </text>
 
-  <!-- 底部渐变线 - 末端微微上扬，暗示方向 -->
-  <path d="M 10 64 C 150 64, 280 64, 360 58" stroke="url(#lg2)" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- 底部渐变曲线，蓝青渐变更鲜明 -->
+  <path d="M 10 60 C 150 60, 300 60, 365 52" stroke="url(#lineGrad6)" stroke-width="4" stroke-linecap="round" fill="none"/>
 </svg>
