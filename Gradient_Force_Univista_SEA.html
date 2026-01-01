@@ -680,14 +680,47 @@
 
         /* Print Styles */
         @media print {
-            .slide {
-                box-shadow: none;
+            @page {
+                size: landscape;
                 margin: 0;
+            }
+
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+
+            .slide {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+                border: none;
+                border-radius: 0;
+                box-shadow: none;
                 page-break-after: always;
+                break-after: page;
+                min-height: 100vh;
+                /* Ensure full page height */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /* Center content vertically if short */
+                padding: 40px;
+                /* Add internal padding for safe area */
+            }
+
+            .slide:last-child {
+                page-break-after: auto;
+                break-after: auto;
             }
 
             body {
-                background: white;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
         }
     </style>
@@ -709,6 +742,8 @@
             <div class="highlight">
                 <h2>Unlocking $8.8B Opportunity (Global TAM)</h2>
                 <p>Strategic India Entry as Gateway to Global Markets</p>
+                <p style="font-size: 12px; margin-top: 10px; opacity: 0.9; font-weight: 400;">(Source: Research &
+                    Markets, EDA Market Report 2024)</p>
             </div>
 
             <div class="regions">
@@ -872,7 +907,14 @@
                 </div>
             </div>
 
-            <div class="regional-focus">
+        </div>
+    </div>
+
+    <!-- Slide 4b: Regional Focus -->
+    <div class="slide">
+        <div class="content">
+            <h2>Regional Strategic Focus</h2>
+            <div class="regional-focus" style="margin-top: 0;">
                 <div class="primary-market">
                     <span class="tag">PRIMARY MARKET</span>
                     <h4>India - Immediate Focus</h4>
@@ -910,10 +952,15 @@
                     <div class="timeline">Immediate (Months 0-12)</div>
                     <div class="focus" style="color: #e65100;">Revenue Generation</div>
                     <ul>
-                        <li><strong>Target:</strong> Startups, IP companies, Services</li>
-                        <li><strong>Goal:</strong> Early wins & revenue</li>
-                        <li><strong>Tactics:</strong> aggressive pilot programs, leveraging existing relationships</li>
-                        <li><strong>Impact:</strong> ~$1.5M Year 1 Pipeline</li>
+                        <li><strong>Target Pipeline:</strong>
+                            <ul style="margin-top: 5px; margin-bottom: 5px; color: #444;">
+                                <li><strong>Startups:</strong> 5-10 funded stealth-mode startups</li>
+                                <li><strong>IP Vendors:</strong> 3-5 Interface/Memory IP providers</li>
+                                <li><strong>Services:</strong> 2-3 Design Service firms (outsourcing)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Goal:</strong> Early wins & revenue ($1.5M Pipeline)</li>
+                        <li><strong>Tactics:</strong> Pilot-to-Production conversion, bundling with IP</li>
                     </ul>
                 </div>
 
@@ -993,21 +1040,31 @@
                         Technology Demo phases</p>
                 </div>
 
-                <div>
-                    <h3>Why Distributor? (Strategic Shield)</h3>
-                    <div class="benefits-list">
-                        <div class="benefit-item">
-                            <h4>FDI & Compliance Shield</h4>
-                            <p>Protects capital from "Press Note 3" restrictions & FDI scrutiny.</p>
-                        </div>
-                        <div class="benefit-item">
-                            <h4>Geopolitical Buffer</h4>
-                            <p>Distributor model insulates Univista from direct "China-origin" sentiment friction.</p>
-                        </div>
-                        <div class="benefit-item">
-                            <h4>Operational Speed</h4>
-                            <p>Immediate market access (1-2 months) vs 6-12 months for direct subsidiary setup.</p>
-                        </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Slide 6b: Distributor Value -->
+    <div class="slide">
+        <div class="content">
+            <h2>Why Distributor Model? (Strategic Shield)</h2>
+            <div style="margin-top: 30px;">
+                <div class="benefits-list">
+                    <div class="benefit-item">
+                        <h4>1. Strategic Shield & Speed</h4>
+                        <p>Immediate market access vs. 6-12 months for subsidiary setup. Insulates Univista from
+                            "Origin" scrutiny.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>2. Capital Efficiency (Growth > Margin)</h4>
+                        <p>We absorb OpEx/Sales costs. Reinvesting 100% of early margins into growth (Marketing,
+                            Support) for 3 years.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>3. Local "Access"</h4>
+                        <p>Deep relationships with Government & Academia that are harder for foreign entities to
+                            navigate directly.</p>
                     </div>
                 </div>
             </div>
