@@ -189,7 +189,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 32px;
         }
 
@@ -567,7 +567,7 @@
             }
 
             .services-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
             }
 
             .footer-content {
@@ -580,6 +580,10 @@
         }
 
         @media (max-width: 480px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
             .hero-text h1 {
                 font-size: 2rem;
             }
@@ -635,8 +639,8 @@
     <section id="solutions" class="services">
         <div class="container">
             <div class="section-header">
-                <h2>Two Delivery Modes</h2>
-                <p>Choose the engagement model that fits your IP protection and infrastructure requirements</p>
+                <h2>Three Ways to Work With Us</h2>
+                <p>Choose the engagement model that fits your budget, IP protection, and infrastructure requirements</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
@@ -667,6 +671,22 @@
                         <li>Full IP protection — source code stays in your environment</li>
                         <li>7x24 autonomous operation via secure remote access</li>
                         <li>Minimal setup — just grant VNC access, we handle the rest</li>
+                    </ul>
+                </div>
+                <div class="service-card" style="border: 2px solid var(--primary); position: relative;">
+                    <div style="position: absolute; top: -14px; right: 24px; background: var(--gradient); color: white; padding: 4px 16px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Best Value</div>
+                    <div class="service-icon" style="background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3>Mode C: AI-Powered Outsourcing</h3>
+                    <p>Replace human engineering hours with AI agents at half the cost. Same deliverables — code, tests, documentation — just faster and cheaper. We take your specs and deliver results.</p>
+                    <ul>
+                        <li>50% cost vs. traditional engineering outsourcing</li>
+                        <li>Deliver production-ready code, tests & docs</li>
+                        <li>7x24 turnaround — no waiting for business hours</li>
+                        <li>Scale up or down instantly — no hiring overhead</li>
                     </ul>
                 </div>
             </div>
