@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Diary | Agentic Systems | Gradient Force</title>
+    <meta name="description" content="A May 2026 research diary reconstructed from local browser history, downloads, and GitHub visits, focused on self-improving agents, harness engineering, and heuristic learning.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --accent: #f97316;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --line: #dbeafe;
+            --gradient: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--secondary);
+            line-height: 1.7;
+            background: linear-gradient(180deg, #f8fbff 0%, #ffffff 240px);
+        }
+
+        a {
+            color: var(--primary);
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.88);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            height: 112px;
+            margin: -28px 0;
+            display: block;
+        }
+
+        .logo img {
+            height: 100%;
+            width: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .hero {
+            padding: 96px 0 48px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.125rem;
+            color: var(--gray);
+            max-width: 860px;
+        }
+
+        .meta-grid {
+            margin-top: 28px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .meta-card,
+        .summary-card,
+        .item-card {
+            background: #ffffff;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.06);
+        }
+
+        .meta-card {
+            padding: 20px;
+        }
+
+        .meta-card h3 {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+
+        .section {
+            padding: 22px 0;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 16px;
+        }
+
+        .summary-card {
+            padding: 26px;
+        }
+
+        .summary-card p + p {
+            margin-top: 14px;
+        }
+
+        .timeline,
+        .repo-list {
+            display: grid;
+            gap: 18px;
+        }
+
+        .item-card {
+            padding: 24px;
+        }
+
+        .item-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+        }
+
+        .item-meta {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .item-card ul {
+            padding-left: 20px;
+            color: #1f2937;
+        }
+
+        .item-card li + li {
+            margin-top: 8px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 12px 18px;
+            border-radius: 10px;
+            background: var(--secondary);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer {
+            padding: 40px 0 64px;
+            color: var(--gray);
+        }
+
+        @media (max-width: 860px) {
+            .meta-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .nav-content {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .logo {
+                height: 88px;
+                margin: -20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="logo"><img src="assets/GF1-transparent.png" alt="Gradient Force"></a>
+            <ul class="nav-links">
+                <li><a href="index.html#research">Research</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <span class="eyebrow">Research Diary · May 27, 2026</span>
+            <h1>最近一轮阅读集中在<br>自演化 Agent、Harness Engineering 与 Heuristic Learning</h1>
+            <p class="subtitle">这篇日记基于本机 Chrome 浏览记录、搜索记录、下载记录和 GitHub 访问轨迹整理而成。时间窗口里最明确的主题是：如何把固定模型包在一个可观测、可回放、可修改的外层系统里，让“改工具链、改控制器、改记忆、改 harness”比“直接改权重”更快地产生能力增益。</p>
+
+            <div class="meta-grid">
+                <div class="meta-card">
+                    <h3>重建依据</h3>
+                    <p>Chrome 浏览与搜索历史、下载数据库、本地下载文件名、GitHub 仓库访问轨迹。</p>
+                </div>
+                <div class="meta-card">
+                    <h3>活跃日期</h3>
+                    <p>2026 年 5 月 9 日到 5 月 23 日，5 月 22 日是论文下载最密集的一天。</p>
+                </div>
+                <div class="meta-card">
+                    <h3>核心问题</h3>
+                    <p>怎样让 agent 系统具备更强的外环优化能力，同时保持可审计、可验证、可回滚。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>一页结论</h2>
+            <div class="summary-card">
+                <p>这轮阅读不是散点式搜资料，而是一条很连续的技术线。5 月 9 日到 10 日的 GitHub 浏览记录显示，阅读重点落在 <a href="https://github.com/Trinkle23897/learning-beyond-gradients">Trinkle23897/learning-beyond-gradients</a>，并且不是只看仓库首页，而是继续钻进了 `mujoco/ant`、`atari/breakout`、`atari/atari57` 和 prompt template 等目录，说明关注点已经从概念层走到了具体实验组织方式。</p>
+                <p>到 5 月 22 日，下载记录切到一组更偏 agent system 的材料，包括《Agentic Harnesses, AutoResearch, Test-Time Scaling, and Self-Improving LLM Agents》与《自演化与 Agentic 系统的控制论综合分析》，同时本地还存在当月下载的《The Log is the Agent》《AutoTTS》《Darwin Gödel Machine》《Meta-Harness》等论文。这些材料指向同一个判断：能力提升越来越依赖外环结构设计，而不是只依赖基础模型本身。</p>
+                <p>如果把这条线压缩成一句话，就是：最近关注的不是“更大的模型”，而是“更能自证、回放、演化和分叉的 agent runtime”。这和工程场景里的真实需求是对齐的，因为可追责、可重跑、可灰度验证，往往比单次 benchmark 提升更重要。</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>阅读过的论文与笔记</h2>
+            <div class="timeline">
+                <article class="item-card">
+                    <h3>《Agentic Harnesses, AutoResearch, Test-Time Scaling, and Self-Improving LLM Agents》</h3>
+                    <div class="item-meta">本地下载时间：2026-05-22 07:03 与 07:04</div>
+                    <ul>
+                        <li>这是一份综合性读书笔记，明确把材料串成了五个代表方向：domain-specific harness、Meta-Harness、memory evolution、test-time controller discovery、agent self-modification。</li>
+                        <li>文档给出的主线很清楚：真正带来收益的往往不是模型本身，而是围绕模型的工具包装、轨迹反馈、回放环境、记忆检索和源码编辑外环。</li>
+                        <li>对工程实现最有价值的判断是“反馈密度比原始自治度更重要”。系统是否能保留原始 trace、是否能回滚、是否能把失败诊断成局部问题，决定了自改写能不能稳定推进。</li>
+                    </ul>
+                </article>
+
+                <article class="item-card">
+                    <h3>《自演化与 Agentic 系统的控制论综合分析》</h3>
+                    <div class="item-meta">本地下载时间：2026-05-22 07:05</div>
+                    <ul>
+                        <li>这份笔记把 DGM、AutoTTS、AHE、autoresearch 和 Learning Beyond Gradients 放进同一个控制论框架里分析。</li>
+                        <li>最关键的抽象是“双时间尺度”：内环执行当前 agent，外环基于日志、回放和评测结果去修改 agent 自身或其控制器。</li>
+                        <li>这份材料强调稳定化装置的重要性，例如 rollback、只读评估、复杂度惩罚、holdout transfer，这些都比“让模型自由探索”更接近工程可落地路径。</li>
+                    </ul>
+                </article>
+
+                <article class="item-card">
+                    <h3><a href="https://arxiv.org/abs/2605.21997">The Log is the Agent: Event-Sourced Reactive Graphs for Auditable, Forkable Agentic Systems</a></h3>
+                    <div class="item-meta">本地文件：2605.21997v1.pdf · 下载日期：2026-05-23</div>
+                    <ul>
+                        <li>核心想法是把 append-only event log 设为 source of truth，而不是把日志当作事后观察层。</li>
+                        <li>这直接支持 deterministic replay、cheap fork 和端到端 lineage，适合需要审计和分支比较的 agent 运行时。</li>
+                        <li>如果后续想做可复现实验型 AutoResearch runtime，这篇论文提供了很强的系统设计参考。</li>
+                    </ul>
+                </article>
+
+                <article class="item-card">
+                    <h3><a href="https://arxiv.org/abs/2605.08083">LLMs Improving LLMs: Agentic Discovery for Test-Time Scaling</a></h3>
+                    <div class="item-meta">本地文件：2605.08083v2.pdf · 下载日期：2026-05-21</div>
+                    <ul>
+                        <li>论文把 test-time scaling 从“人工写策略”改写成“在环境里自动发现控制器”的问题。</li>
+                        <li>重点不是单个 heuristic，而是构造一个反馈便宜、控制空间可搜索的发现环境。</li>
+                        <li>对实用系统的启发是：如果评测可以 replay，controller search 就能做得更便宜，也更适合 agent 自动迭代。</li>
+                    </ul>
+                </article>
+
+                <article class="item-card">
+                    <h3><a href="https://arxiv.org/abs/2505.22954">Darwin Gödel Machine: Open-Ended Evolution of Self-Improving Agents</a></h3>
+                    <div class="item-meta">本地文件：2505.22954v3.pdf · 下载日期：2026-05-22</div>
+                    <ul>
+                        <li>这篇工作直接把 agent 的代码库设为优化对象，让 agent 通过 benchmark 验证来修改未来的自己。</li>
+                        <li>相比单路径爬山，它更看重 archive 与谱系管理，因为中间退化的分支也可能成为后续突破的 stepping stone。</li>
+                        <li>它代表了“源码级外环改写”这条线的上限，也同时暴露了安全性、治理与验证成本问题。</li>
+                    </ul>
+                </article>
+
+                <article class="item-card">
+                    <h3><a href="https://arxiv.org/abs/2603.28052">Meta-Harness: End-to-End Optimization of Model Harnesses</a></h3>
+                    <div class="item-meta">本地文件：2603.28052v1.pdf · 下载日期：2026-05-18</div>
+                    <ul>
+                        <li>它把 harness 当成优化对象，而不是把 prompt 或参数当成唯一调节手段。</li>
+                        <li>核心方法是让 coding agent 读取历史 harness、分数和原始 trace，再生成新的 harness 代码。</li>
+                        <li>对工程系统的价值在于：它把“围绕模型的程序结构”视为第一等公民，这和面向真实任务的 agent 编排非常一致。</li>
+                    </ul>
+                </article>
+
+                <article class="item-card">
+                    <h3><a href="https://arxiv.org/abs/2507.21046">A Survey of Self-Evolving Agents</a></h3>
+                    <div class="item-meta">本地文件：2507.21046v4.pdf · 下载日期：2026-05-23</div>
+                    <ul>
+                        <li>这篇综述更像是体系化地图，帮助区分“演化什么、何时演化、如何演化、在哪个层面演化”。</li>
+                        <li>它适合拿来做分类框架，而不是拿来直接决定实现细节。</li>
+                        <li>结合前面几篇论文阅读，它可以作为后续整理研究议程时的索引层。</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>GitHub 深读项目</h2>
+            <div class="repo-list">
+                <article class="item-card">
+                    <h3><a href="https://github.com/Trinkle23897/learning-beyond-gradients">Trinkle23897/learning-beyond-gradients</a></h3>
+                    <div class="item-meta">访问高峰：2026-05-09 到 2026-05-10</div>
+                    <ul>
+                        <li>仓库描述就是 “Heuristic Learning Blog Post”，但浏览轨迹显示阅读不止停留在文章页面，而是深入看了 Atari、MuJoCo、Breakout、Ant 和 prompt template 等实验材料。</li>
+                        <li>这说明关注的重点不是“HL 这个概念是否成立”，而是它如何通过代码 heuristics、实验脚本和归档结果落成一个真正可复现的 workflow。</li>
+                        <li>对这轮阅读主线而言，它像是一个非梯度路线的参照组：不是优化模型权重，而是优化程序、规则、策略和搜索过程。</li>
+                    </ul>
+                </article>
+
+                <article class="item-card">
+                    <h3><a href="https://github.com/sail-sg/envpool">sail-sg/envpool</a></h3>
+                    <div class="item-meta">访问时间：2026-05-09 22:20</div>
+                    <ul>
+                        <li>这是一个高性能并行环境执行引擎，服务于通用 RL environment 的向量化运行。</li>
+                        <li>它出现在这条阅读链中很合理，因为无论是 Heuristic Learning 还是 controller discovery，背后都依赖便宜、稳定、批量化的 rollout 环境。</li>
+                        <li>它代表的是“实验吞吐量基础设施”这一层，而不是算法主体本身。</li>
+                    </ul>
+                </article>
+
+                <article class="item-card">
+                    <h3><a href="https://github.com/vllm-project/vllm">vllm-project/vllm</a></h3>
+                    <div class="item-meta">访问时间：2026-05-09 16:46</div>
+                    <ul>
+                        <li>vLLM 是高吞吐、内存效率高的 LLM inference / serving engine。</li>
+                        <li>它和这轮论文阅读形成互补：论文讨论如何改 agent 外环，vLLM 代表真实推理系统的执行底座。</li>
+                        <li>如果后续把 controller search、trace replay 或 self-improving harness 接到生产推理链路上，类似 vLLM 这样的 runtime 约束是必须面对的。</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>搜索记录给出的补充信号</h2>
+            <div class="summary-card">
+                <p>本机近期可见的搜索记录非常稀疏，明确抓到的查询主要是 2026 年 5 月 3 日围绕 “deepseek v4 flash mac studio 512G” 的 Google 搜索。这说明当前研究日记的主线更多来自直接访问论文、仓库和本地整理材料，而不是靠搜索引擎连续发散。</p>
+                <p>换句话说，这一轮不是“广撒网找方向”，而是已经有方向后，围绕少量高相关材料做深挖。</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>当前判断</h2>
+            <div class="summary-card">
+                <p>最近阅读最稳定的结论是：下一代 agent 系统的差异化，越来越可能来自外环工程学。哪些状态被保存，哪些 trace 被保留，控制器是否可搜索，失败是否可诊断，分支是否可 fork，评估是否足够便宜，这些问题决定了 agent 是否能持续提升。</p>
+                <p>对于真实工程任务，这条路线比“再堆一个更大的模型”更可操作。因为日志、图、回放、分叉、回滚、局部验证和基准守门，都是可以逐步加到现有系统里的能力，而不是必须等待新的基础模型代际更替。</p>
+                <a class="back-link" href="index.html">Back to Homepage</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container">
+        <p>This journal entry was generated from local research traces on May 27, 2026 and then curated into a public summary.</p>
+    </footer>
+</body>
+</html>

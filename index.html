@@ -193,6 +193,23 @@
             gap: 32px;
         }
 
+        .journal-callout {
+            margin-top: 40px;
+            padding: 32px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            border: 1px solid rgba(37, 99, 235, 0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .journal-callout p {
+            color: var(--gray);
+            max-width: 760px;
+        }
+
         .service-card {
             background: var(--light);
             border-radius: 16px;
@@ -574,6 +591,11 @@
                 grid-template-columns: 1fr 1fr;
             }
 
+            .journal-callout {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
             .footer-content {
                 grid-template-columns: 1fr 1fr;
             }
@@ -617,6 +639,7 @@
                 <li><a href="#delivery">Delivery</a></li>
                 <li><a href="#how-it-works">Process</a></li>
                 <li><a href="#use-cases">Use Cases</a></li>
+                <li><a href="research-diary-2026-05-agentic-systems.html">Journal</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -631,7 +654,7 @@
                     <h1><span>Autonomous</span> R&D Systems</h1>
                     <p>We deploy multi-agent AI systems that run your engineering R&D 7x24. Minimal disruption to your existing environment. From concept to working code, around the clock.</p>
                     <a href="#solutions" class="btn btn-primary">See How It Works</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                    <a href="research-diary-2026-05-agentic-systems.html" class="btn btn-secondary">Latest Journal</a>
                 </div>
                 <div class="hero-visual">
                     <img src="assets/hero-chip.svg" alt="Multi-Agent R&D System">
@@ -913,6 +936,13 @@
                     <p style="color: var(--gray); font-size: 1.125rem; margin-bottom: 16px;">Whether it's semiconductor design, scientific computing, or full-stack application development — the same proven orchestration engine powers autonomous, continuous progress.</p>
                     <p style="color: var(--gray); font-size: 1.125rem;">Chip design is where we started. Your domain is where we go next.</p>
                 </div>
+            </div>
+            <div class="journal-callout">
+                <div>
+                    <h3>Latest Research Diary</h3>
+                    <p>Published on May 27, 2026. This note reconstructs a recent reading thread from local browser history, download records, and GitHub visits, then summarizes the core ideas around self-improving agents, harness engineering, and heuristic learning.</p>
+                </div>
+                <a href="research-diary-2026-05-agentic-systems.html" class="btn btn-primary">Read the Diary</a>
             </div>
         </div>
     </section>
